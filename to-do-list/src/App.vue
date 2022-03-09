@@ -1,7 +1,11 @@
 <template>
   <h1>To-Do List (VueJS)</h1>
-  <InputForm />
-  <GroceryList :fullList="fullList"/>
+  <InputForm 
+    v-on:submitInput="addInput($event)"
+  />
+  <GroceryList 
+    :fullList="fullList"
+  />
 </template>
 
 <script>
@@ -19,7 +23,8 @@ export default {
     // can be used for prop drilling
   data() {
     return {
-      fullList: []
+      fullList: [],
+      addObj: []
     }
   },
   // method allows properties in data to be accessed
@@ -37,7 +42,17 @@ export default {
           name: "bread",
           quantity: 10
       }
-    ]
+    ],
+    this.addObj = []
+  },
+  methods: {
+      addInput(inputObj) {
+
+          this.addObj = inputObj;
+
+          console.log("addObj: ", this.addObj);
+          // console.log("Hello from addInput!");
+      }
   }
 }
 </script>

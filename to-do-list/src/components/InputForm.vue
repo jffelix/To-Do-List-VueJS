@@ -13,7 +13,7 @@
       v-model="item.quantity"
     />
   <p></p>
-  <button v-on:click="submitInput()">Submit Item</button>
+  <button v-on:click="submitInput(item.name, item.quantity)">Submit Item</button>
 </template>
 
 <script>
@@ -28,13 +28,21 @@ export default {
             }
         }
     },
+    props: {
+        addInput: Function
+    },
     methods: {
-        submitInput() {
-            const addObj = {
+        submitInput(name, quantity) {
+
+            this.item.name = name;
+            this.item.quantity = quantity;
+
+            const inputObj = {   
                 name: this.item.name,
                 quantity: Number(this.item.quantity)
             }
-            console.log("addObj: ", addObj);
+
+            this.$emit("submitInput", inputObj);
         }
     }
 }
