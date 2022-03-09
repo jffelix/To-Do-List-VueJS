@@ -16,7 +16,7 @@ Welcome to my To-Do List application using VueJS! This application was completed
 
 If you haven't downloaded vue/cli yet:
 
-- run "npm i -g @vue/cli"
+- run "npm i -g @vue/cli" in your Terminal
 
 If you already downloaded vue/cli:
 
