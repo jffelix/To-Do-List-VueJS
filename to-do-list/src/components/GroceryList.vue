@@ -3,6 +3,8 @@
   <div v-for="grocery in fullList">
       <p>{{grocery.name}}</p>
       <p>{{grocery.quantity}}</p>
+      <button>Update Item</button>
+      <button>Delete Item</button>
   </div>
 </template>
 
