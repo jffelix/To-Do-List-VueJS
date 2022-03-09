@@ -53,6 +53,12 @@ export default {
             this.showUpdateForm = !this.showUpdateForm;
         },
         submitUpdate(name, quantity) {
+
+            if ((name === null || name.length === 0) || (quantity === null || quantity.length === 0)) {
+                alert("Please fill in both input fields.");
+                return;
+            }
+
             this.item.updateName = name;
             this.item.updateQuantity = quantity;
 
