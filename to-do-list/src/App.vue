@@ -1,11 +1,15 @@
 <template>
   <h1>To-Do List (VueJS)</h1>
 </template>
+
 <script>
+
 export default {
-  name: "App",
-  components: {},
-};
+  name: 'App',
+  components: {
+
+  }
+}
 </script>
 
 <style>
