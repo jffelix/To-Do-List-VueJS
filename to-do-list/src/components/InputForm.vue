@@ -36,6 +36,11 @@ export default {
     methods: {
         submitInput(name, quantity) {
 
+            if ((name === null || name.length === 0) || (quantity === null || quantity.length === 0)) {
+                alert("Please fill in both input fields.");
+                return;
+            }
+
             this.item.name = name;
             this.item.quantity = quantity;
 
