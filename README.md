@@ -12,6 +12,9 @@ Welcome to my To-Do List application using VueJS! This application was completed
 - Delete to remove selected items
 - Full list toggles off to display update form
 
+## Future goals
+- Implement back-end using a SQL database
+
 ## How to run the application
 
 If you haven't downloaded vue/cli yet:
