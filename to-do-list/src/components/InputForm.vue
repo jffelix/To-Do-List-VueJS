@@ -31,6 +31,8 @@ export default {
     props: {
         addInput: Function
     },
+    // need to add emits property when using this.$emit
+    emits: ["submitInput"],
     methods: {
         submitInput(name, quantity) {
 
@@ -41,7 +43,7 @@ export default {
                 name: this.item.name,
                 quantity: Number(this.item.quantity)
             }
-
+            // allows to send inputObj to parent
             this.$emit("submitInput", inputObj);
         }
     }

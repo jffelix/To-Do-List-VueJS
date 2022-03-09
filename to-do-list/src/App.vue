@@ -1,7 +1,7 @@
 <template>
   <h1>To-Do List (VueJS)</h1>
   <InputForm 
-    v-on:submitInput="addInput($event)"
+    v-on:submitInput="addInput"
   />
   <GroceryList 
     :fullList="fullList"
@@ -50,8 +50,7 @@ export default {
 
           this.addObj = inputObj;
 
-          console.log("addObj: ", this.addObj);
-          // console.log("Hello from addInput!");
+          this.fullList.push(this.addObj);
       }
   }
 }
