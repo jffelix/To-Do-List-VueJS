@@ -5,6 +5,7 @@
   />
   <GroceryList 
     :fullList="fullList"
+    v-on:updateItem="updateInput"
     v-on:deleteItem="deleteInput"
   />
 </template>
@@ -52,6 +53,9 @@ export default {
           this.addObj = inputObj;
 
           this.fullList.push(this.addObj);
+      },
+      updateInput(updateIndex, updateObj) {
+          this.fullList[updateIndex] = updateObj;
       },
       deleteInput(index) {
           this.fullList.splice(index, 1);
