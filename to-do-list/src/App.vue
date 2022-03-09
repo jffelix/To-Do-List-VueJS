@@ -15,11 +15,14 @@ export default {
     GroceryList,
     InputForm
   },
+  // similar to initial state
+    // can be used for prop drilling
   data() {
     return {
       fullList: []
     }
   },
+  // method allows properties in data to be accessed
   created() {
     this.fullList = [
       {

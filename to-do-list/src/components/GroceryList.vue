@@ -12,6 +12,7 @@
 
 export default {
     name: "GroceryList",
+    // prop type needs to be specified
     props: {
         fullList: Array
     }
