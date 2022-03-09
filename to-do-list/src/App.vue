@@ -1,16 +1,19 @@
 <template>
   <h1>To-Do List (VueJS)</h1>
-  <GroceryList :fullList="fullList" />
+  <InputForm />
+  <GroceryList :fullList="fullList"/>
 </template>
 
 <script>
 
 import GroceryList from "./components/GroceryList.vue";
+import InputForm from "./components/InputForm.vue";
 
 export default {
   name: 'App',
   components: {
-    GroceryList
+    GroceryList,
+    InputForm
   },
   data() {
     return {
