@@ -1,13 +1,37 @@
 <template>
   <h1>To-Do List (VueJS)</h1>
+  <GroceryList :fullList="fullList" />
 </template>
 
 <script>
 
+import GroceryList from "./components/GroceryList.vue";
+
 export default {
   name: 'App',
   components: {
-
+    GroceryList
+  },
+  data() {
+    return {
+      fullList: []
+    }
+  },
+  created() {
+    this.fullList = [
+      {
+          name: "oranges",
+          quantity: 5
+      },
+      {
+          name: "grapes",
+          quantity: 2
+      },
+      {
+          name: "bread",
+          quantity: 10
+      }
+    ]
   }
 }
 </script>
