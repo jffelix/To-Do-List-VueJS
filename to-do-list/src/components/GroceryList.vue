@@ -4,7 +4,7 @@
       <p>{{grocery.name}}</p>
       <p>{{grocery.quantity}}</p>
       <button v-on:click="updateItem()">Update Item</button>
-      <button>Delete Item</button>
+      <button v-on:click="deleteItem()">Delete Item</button>
   </div>
 </template>
 
@@ -19,6 +19,9 @@ export default {
     methods: {
         updateItem() {
             console.log("You clicked Update button!");
+        },
+        deleteItem() {
+            console.log("You clicked Delete button!");
         }
     }
 }

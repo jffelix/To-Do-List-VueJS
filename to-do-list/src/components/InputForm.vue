@@ -5,13 +5,18 @@
   <p>Quantity</p>
     <input />
   <p></p>
-  <button>Submit Item</button>
+  <button v-on:click="submitInput()">Submit Item</button>
 </template>
 
 <script>
 
 export default {
-    name: "InputForm"
+    name: "InputForm",
+    methods: {
+        submitInput() {
+            console.log("You clicked Submit button!");
+        }
+    }
 }
 
 </script>
