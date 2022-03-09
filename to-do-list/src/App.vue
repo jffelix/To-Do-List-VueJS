@@ -5,6 +5,7 @@
   />
   <GroceryList 
     :fullList="fullList"
+    v-on:deleteItem="deleteInput"
   />
 </template>
 
@@ -51,6 +52,9 @@ export default {
           this.addObj = inputObj;
 
           this.fullList.push(this.addObj);
+      },
+      deleteInput(index) {
+          this.fullList.splice(index, 1);
       }
   }
 }
