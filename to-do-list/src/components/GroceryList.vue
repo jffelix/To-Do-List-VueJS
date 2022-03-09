@@ -21,6 +21,7 @@ export default {
             console.log("You clicked Update button!");
         },
         deleteItem() {
+            // need to find out how to get index from v-for loop
             console.log("You clicked Delete button!");
         }
     }
