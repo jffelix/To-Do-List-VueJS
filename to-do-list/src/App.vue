@@ -14,6 +14,7 @@
 
 import GroceryList from "./components/GroceryList.vue";
 import InputForm from "./components/InputForm.vue";
+// download and import axios here later
 
 export default {
   name: 'App',
